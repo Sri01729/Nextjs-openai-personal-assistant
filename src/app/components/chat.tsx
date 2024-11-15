@@ -9,7 +9,7 @@ import { FaRobot, FaUser } from 'react-icons/fa'
 
 export function Chat() {
     const { messages, input, handleInputChange, handleSubmit } = useChat({
-        api: 'api/langchain',
+        api: 'api/langchainWithTemplate',
         onError: (e)=>{console.log(e)}
     });
     const chatParent = useRef<HTMLUListElement>(null)
