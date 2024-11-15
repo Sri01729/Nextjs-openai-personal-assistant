@@ -3,16 +3,35 @@
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { useChat } from "ai/react"
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { FaRobot, FaUser } from 'react-icons/fa'
+import { HiMiniSpeakerWave } from "react-icons/hi2";
 
 export function Chat() {
+
     const { messages, input, handleInputChange, handleSubmit } = useChat({
         api: 'api/langchainWithTemplate',
         onError: (e)=>{console.log(e)}
     });
+
     const chatParent = useRef<HTMLUListElement>(null)
+
+    const [color, setColor] = useState('black')
+    const [isPlaying, setIsPlaying]= useState(true)
+
+    const textToSpeech = (input: string) => {
+
+        setColor(color === 'black' ? 'blue' : 'black')
+        const msg = new SpeechSynthesisUtterance(input);
+        if (isPlaying) {
+            window.speechSynthesis.speak(msg);
+            setIsPlaying(false)
+        } else {
+            window.speechSynthesis.cancel();
+            setIsPlaying(true)
+        }
+    }
 
     useEffect(() => {
         const domNode = chatParent.current
@@ -48,7 +67,8 @@ export function Chat() {
                                             <FaRobot size={24} color="white" />
                                         </div>
                                         <div className="rounded-xl p-4 bg-background shadow-md flex w-3/4">
-                                            <p className="text-primary"><span className="font-bold"> </span>{m.content}</p>
+                                                <p className="text-primary"><span className="font-bold"> </span>{m.content}</p>
+                                                < HiMiniSpeakerWave color={color} size={24} className="ml-1" onClick={() => textToSpeech(m.content)} />
                                         </div>
                                     </li>
                                 )}
