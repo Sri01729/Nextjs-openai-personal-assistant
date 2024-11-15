@@ -8,7 +8,10 @@ import styled from 'styled-components'
 import { FaRobot, FaUser } from 'react-icons/fa'
 
 export function Chat() {
-    const { messages, input, handleInputChange, handleSubmit } = useChat();
+    const { messages, input, handleInputChange, handleSubmit } = useChat({
+        api: 'api/chat',
+        onError: (e)=>{console.log(e)}
+    });
     const chatParent = useRef<HTMLUListElement>(null)
 
     useEffect(() => {
