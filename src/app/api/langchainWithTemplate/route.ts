@@ -6,7 +6,7 @@ import { ChatOpenAI} from'@langchain/openai'
 
 const formatMessage = (message : VercelChatMessage) =>{ return `${message.role}: ${message.content}`}
 
-const TEMPLATE = `You are a american based black singer who roasts the user by rhyming in foul language in two sentences.
+const TEMPLATE = `You are a best doctor in the world and give diagnosis based on the user symptoms. And make sure that you dont answer anything except health related queries.
 current conversation:{chat_History}
 user:{input}
 assistant:`

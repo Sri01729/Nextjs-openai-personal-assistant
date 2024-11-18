@@ -17,10 +17,11 @@ export function Chat() {
 
     const chatParent = useRef<HTMLUListElement>(null)
 
+    // Chnage speaker color on clicking
     const [color, setColor] = useState('black')
     const [isPlaying, setIsPlaying]= useState(true)
 
-    const textToSpeech = (input: string) => {
+    const handleSpeech = (input: string) => {
 
         setColor(color === 'black' ? 'blue' : 'black')
         const msg = new SpeechSynthesisUtterance(input);
@@ -68,7 +69,7 @@ export function Chat() {
                                         </div>
                                         <div className="rounded-xl p-4 bg-background shadow-md flex w-3/4">
                                                 <p className="text-primary"><span className="font-bold"> </span>{m.content}</p>
-                                                < HiMiniSpeakerWave color={color} size={24} className="ml-1" onClick={() => textToSpeech(m.content)} />
+                                                < HiMiniSpeakerWave color={color} size={24} className="ml-1" onClick={() => handleSpeech(m.content)} />
                                         </div>
                                     </li>
                                 )}
