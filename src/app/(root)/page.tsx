@@ -12,6 +12,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import Navbar from "../components/Navbar"
 
 export default function Page() {
   return (
@@ -32,7 +33,8 @@ export default function Page() {
               </BreadcrumbList>
             </Breadcrumb>
           </div>
-          <div className="ml-auto px-3">
+          <div className="ml-auto px-3 flex flex-row">
+            <Navbar />
             <NavActions />
           </div>
         </header>
