@@ -10,8 +10,8 @@ const Homepage = () => {
       <div className={cn("min-h-screen flex flex-col bg-background text-foreground")}>
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center py-16 px-6">
-        <h1 className="text-4xl font-bold md:text-5xl">Welcome to MediBot</h1>
-        <p className="mt-4 text-lg md:text-xl">
+        <h1 className="text-4xl font-bold md:text-3xl">Welcome to MediBot</h1>
+        <p className="mt-4 text-lg md:text">
           Your personal AI-powered health assistant, here to answer all your medical questions.
         </p>
         <section className="mt-14 px-8 py-3 rounded-lg">
@@ -23,7 +23,7 @@ const Homepage = () => {
       {/* Features Section */}
       <section className="py-16 px-6">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center md:text-4xl mb-12">
+          <h2 className="text-3xl font-bold text-center md:text-3xl mb-12">
             What MediBot Can Do
           </h2>
           <div className="flex flex-row flex-shrink gap-5 p-5">

@@ -41,7 +41,7 @@ export default function Page() {
         </header>
         <div className="flex flex-1 flex-col gap-4 px-4 py-10">
           <div className="mx-auto h-12 w-full max-w-3xl rounded-xl bg-muted/50 text-center flex justify-center items-center text-foreground">
-         Medibot
+         Chat here
             </div>
           <div className="mx-auto h-50% w-full max-w-3xl rounded-xl bg-muted/50">
               <Chat />
