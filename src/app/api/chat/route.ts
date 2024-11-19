@@ -5,8 +5,12 @@ import { OpenAIStream, StreamingTextResponse } from 'ai';
 export const runtime = 'edge';
 
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: process.env.OPENAI_API_KEY || '',
 });
+if (!process.env.OPENAI_API_KEY) {
+    console.error('OPENAI_API_KEY is missing');
+    throw new Error('OPENAI_API_KEY is not defined');
+}
 
 export async function POST(req: Request) {
     // Extract the `messages` from the body of the request
