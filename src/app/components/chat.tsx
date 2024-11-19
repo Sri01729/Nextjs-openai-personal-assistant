@@ -44,8 +44,8 @@ export function Chat() {
 
     return (
 
-            <main className="flex flex-col w-full h-[75vh]">
-                <section className="container px-0 pb-10 flex flex-col flex-grow gap-4 mx-auto max-w-3xl chatContainer">
+            <main className="flex flex-col w-full h-[75vh] ">
+                <section className="container px-0 pb-10 flex flex-col flex-grow gap-4 mx-auto max-w-3xl">
                     <ul ref={chatParent} className="h-1 p-4 flex-grow  rounded-lg overflow-y-auto flex flex-col gap-4">
                         {messages.map((m, index) => (
                             <>
@@ -84,7 +84,7 @@ export function Chat() {
                 <section className="p-4">
                     <form onSubmit={handleSubmit} className="flex w-full max-w-3xl mx-auto items-center">
                         <Input className="flex-1 min-h-[40px] " placeholder="Type your question here..." type="text" value={input} onChange={handleInputChange} />
-                        <Button className="ml-2 pt-4 pb-4 border bg-transparent" type="submit">
+                        <Button className="ml-2 pt-4 pb-4 border bg-transparent text-foreground" type="submit">
                             Submit
                         </Button>
                     </form>

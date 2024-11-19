@@ -17,13 +17,13 @@ export function NavMain({
     url: string
     icon: LucideIcon
     isActive?: boolean
-    link: string
   }[]
 }) {
   return (
     <SidebarMenu>
       {items.map((item) => (
-        <Link href={item.link}>
+
+
         <SidebarMenuItem key={item.title}>
           <SidebarMenuButton asChild isActive={!item.isActive}>
             <a href={item.url}>
@@ -32,7 +32,7 @@ export function NavMain({
             </a>
           </SidebarMenuButton>
           </SidebarMenuItem>
-          </Link>
+
       ))}
     </SidebarMenu>
   )

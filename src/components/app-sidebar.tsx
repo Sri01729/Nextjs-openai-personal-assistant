@@ -51,16 +51,14 @@ const data = {
 
     {
       title: "Home",
-      url: "#",
+      url: "/",
       icon: Home,
       isActive: true,
-      link:'/'
     }, {
       title: "Ask Medibot",
-      url: "#",
+      url: "/chat",
       icon: Sparkles,
       isActive: true,
-      link:'/chat'
     }
   ],
   navSecondary: [

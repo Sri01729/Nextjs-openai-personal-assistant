@@ -21,7 +21,7 @@ export default function Page() {
 <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="flex h-14 shrink-0 items-center gap-2">
+        <header className="flex h-14 shrink-0 items-center gap-2 bg-background text-foreground">
           <div className="flex flex-1 items-center gap-2 px-3">
             <SidebarTrigger />
             <Separator orientation="vertical" className="mr-2 h-4" />
@@ -40,7 +40,7 @@ export default function Page() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 px-4 py-10">
-          <div className="mx-auto h-12 w-full max-w-3xl rounded-xl bg-muted/50 text-center flex justify-center items-center">
+          <div className="mx-auto h-12 w-full max-w-3xl rounded-xl bg-muted/50 text-center flex justify-center items-center text-foreground">
          Medibot
             </div>
           <div className="mx-auto h-50% w-full max-w-3xl rounded-xl bg-muted/50">

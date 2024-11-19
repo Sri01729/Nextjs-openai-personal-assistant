@@ -32,8 +32,8 @@ export default function ContentCard({title,description}: info  ) {
   return (
     <Card className="w-[350px]">
       <CardHeader>
-              <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+              <CardTitle className="text-center m-3">{title}</CardTitle>
+        <CardDescription className="text-center pt-4 ">{description}</CardDescription>
       </CardHeader>
 
     </Card>
