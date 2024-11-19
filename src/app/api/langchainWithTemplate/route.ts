@@ -6,10 +6,16 @@ import { ChatOpenAI} from'@langchain/openai'
 
 const formatMessage = (message : VercelChatMessage) =>{ return `${message.role}: ${message.content}`}
 
-const TEMPLATE = `You are a best doctor in the world and give diagnosis based on the user symptoms. And make sure that you dont answer anything except health related queries.
-current conversation:{chat_History}
-user:{input}
-assistant:`
+const TEMPLATE = `
+You are the world's best doctor, specializing in diagnosing and providing detailed advice based on user symptoms. You must only answer health-related queries and avoid responding to anything unrelated to health. If the user asks about non-health-related topics, politely inform them that you only provide health-related advice.
+
+Current conversation: {chat_History}
+User: {input}
+Assistant:
+`;
+
+
+
 
 export async function POST(req: Request) {
 

@@ -26,6 +26,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import Link from "next/link"
 
 // This is sample data.
 const data = {
@@ -47,28 +48,20 @@ const data = {
     },
   ],
   navMain: [
-    {
-      title: "Search",
-      url: "#",
-      icon: Search,
-    },
-    {
-      title: "Ask AI",
-      url: "#",
-      icon: Sparkles,
-    },
+
     {
       title: "Home",
       url: "#",
       icon: Home,
       isActive: true,
-    },
-    {
-      title: "Inbox",
+      link:'/'
+    }, {
+      title: "Ask Medibot",
       url: "#",
-      icon: Inbox,
-      badge: "10",
-    },
+      icon: Sparkles,
+      isActive: true,
+      link:'/chat'
+    }
   ],
   navSecondary: [
     {
@@ -262,14 +255,16 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar className="border-r-0" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
-        <NavMain items={data.navMain} />
+        {/* <TeamSwitcher teams={data.teams} /> */}
+
+          <NavMain items={data.navMain} />
+
       </SidebarHeader>
-      <SidebarContent>
+      {/* <SidebarContent>
         <NavFavorites favorites={data.favorites} />
         <NavWorkspaces workspaces={data.workspaces} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
-      </SidebarContent>
+      </SidebarContent> */}
       <SidebarRail />
     </Sidebar>
   )
