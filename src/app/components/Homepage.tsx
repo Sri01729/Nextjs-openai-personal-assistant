@@ -1,8 +1,8 @@
 import React from 'react'
 import Botanimation from './Botanimation'
-import { Card, CardContent } from '@/components/ui/card'
 import ContentCard from './ContentCard'
 import { cn } from '@/lib/utils'
+import Hero45 from './NewHomepage'
 
 const Homepage = () => {
   return (
@@ -51,6 +51,8 @@ const Homepage = () => {
           </p>
         </div>
       </footer>
+
+      <Hero45 />
     </div>
   )
 

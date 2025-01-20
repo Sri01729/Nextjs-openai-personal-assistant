@@ -1,5 +1,4 @@
 import { AppSidebar } from "@/components/app-sidebar"
-import { NavActions } from "@/components/nav-actions"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,8 +12,8 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 import Navbar from "../components/Navbar"
-import { Chat } from "../components/chat"
-import Homepage from "../components/Homepage"
+import NewHomepage from "../components/NewHomepage"
+
 
 export default function Page() {
   return (
@@ -40,7 +39,7 @@ export default function Page() {
                     </div>
                 </header>
                 <div className="flex flex-1 flex-col gap-4 px-4 py-10">
-                    <Homepage />
+                    <NewHomepage />
                 </div>
             </SidebarInset>
         </SidebarProvider>

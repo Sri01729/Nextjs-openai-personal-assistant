@@ -12,7 +12,6 @@ You are the world's best doctor, specializing in diagnosing and providing detail
 
 Current conversation: {chat_History}
 User: {input}
-Assistant:
 `;
 
 export async function POST(req: Request) {
